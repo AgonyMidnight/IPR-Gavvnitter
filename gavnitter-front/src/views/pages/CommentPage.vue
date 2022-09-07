@@ -4,6 +4,11 @@
     <span class="header-post-page">New commented posts:</span>
   </div>
   <div>
+    <span
+        class="text-primary display-6 my-3"
+        v-if="posts?.length === 0 || posts === null"
+    >No posts with new comments =( </span>
+
     <div
         class="mx-5 col-7"
         v-for="post in posts" :key="post.id">

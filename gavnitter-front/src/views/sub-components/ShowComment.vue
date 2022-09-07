@@ -24,7 +24,7 @@
 
 <script lang="ts">
 
-import {computed, defineComponent, ref} from "vue";
+import {computed, defineComponent, onMounted, ref} from "vue";
 import store from "@/store"
 import Comment from "@/views/sub-components/Comment.vue";
 
@@ -36,7 +36,11 @@ export default defineComponent({
   props: {
     postId: Number,
   },
+
   setup(props) {
+    onMounted(() => {
+      store.commit('comment/clearComment')
+    })
     return {
       props,
       comments: computed(() => store.getters['comment/getComments']),
