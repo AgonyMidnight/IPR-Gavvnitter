@@ -10,7 +10,7 @@
       <div>
         <button
             class="btn btn-primary"
-            @click="getPosts(numberPage, null)"
+            @click="getPosts(numberPage, userId)"
         >More
         </button>
       </div>
@@ -38,12 +38,13 @@ export default defineComponent({
     const route = useRoute();
 
     onMounted( () => {
-      userId = route.query.id;
+      userId = route.params.id;
       getPosts(++numberPage, userId);
     })
     return {
       getPosts,
       posts: computed(() => store.getters['post/getPosts']),
+      userId,
       numberPage,
     }
   },
