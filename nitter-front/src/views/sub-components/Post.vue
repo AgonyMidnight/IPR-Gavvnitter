@@ -31,7 +31,7 @@
       <b-modal
           ref="modal"
           :id="'comments-modal-' + post.id"
-          title="Gavno-Comments"
+          title="Comments"
           @show="loadComments"
           @hidden="clearStore"
           hide-footer

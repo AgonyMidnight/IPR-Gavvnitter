@@ -1,4 +1,4 @@
-# IPR-Gavvnitter
+# IPR-Nitter
 
 
 Написать микро сервис типа твиттер.

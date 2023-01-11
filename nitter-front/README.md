@@ -1,4 +1,4 @@
-# gavnitter
+# Nitter
 
 ## Project setup
 ```
